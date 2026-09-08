@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-// Logo linkini istemciye gönderen endpoint
+// Logo endpoint'i
 app.get('/logo', (req, res) => {
     res.json({ logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" });
 });
