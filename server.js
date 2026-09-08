@@ -4,6 +4,11 @@ const app = express();
 
 app.use(express.json());
 
+// Logo linkini istemciye gönderen endpoint
+app.get('/logo', (req, res) => {
+    res.json({ logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" });
+});
+
 app.post('/play', async (req, res) => {
     const ytUrl = req.body.url;
     if (!ytdl.validateURL(ytUrl)) {
